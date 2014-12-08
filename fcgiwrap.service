@@ -1,0 +1,11 @@
+[Unit]
+Description=Simple CGI Server
+After=nss-user-lookup.target
+
+[Service]
+ExecStart=/usr/bin/spawn-fcgi -u http -g http -s /run/fcgiwrap.sock -n -- /usr/bin/fcgiwrap
+User=http
+Group=http
+
+[Install]
+Also=fcgiwrap.socket

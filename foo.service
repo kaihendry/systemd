@@ -1,0 +1,5 @@
+[Unit]
+Description=Foo hello world
+
+[Service]
+ExecStart=/usr/bin/echo HELLO WORLD
